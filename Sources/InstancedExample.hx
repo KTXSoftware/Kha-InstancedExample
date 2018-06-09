@@ -90,6 +90,7 @@ class InstancedExample {
 		// Color structure, is different for each instance
 		structures[1] = new VertexStructure();
         structures[1].add("col", VertexData.Float3);
+		structures[1].instanced = true;
 		
 		vertexBuffers[1] = new VertexBuffer(
 			instances.length,
@@ -109,6 +110,7 @@ class InstancedExample {
 		// Transformation matrix, is different for each instance
 		structures[2] = new VertexStructure();
 		structures[2].add("m", VertexData.Float4x4);
+		structures[2].instanced = true;
 		
 		vertexBuffers[2] = new VertexBuffer(
 			instances.length,
